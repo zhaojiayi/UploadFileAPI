@@ -7,11 +7,11 @@
 2、POST请求格式包含5个参数
 ```JSON
 {
-   "touser" : "UserID1|UserID2|UserID3",  //@all表示向所有员工发送
-   "toparty" : "PartyID1|PartyID2",  //@all表示忽略本参数
-   "totag" : "TagID1 | TagID2",   //@all表示忽略本参数
-   "agentid" : "...",  //应用ID
-   "file" : "..."     //文件标识名必须为 "file"
+   "touser" : "UserID1|UserID2|UserID3", 
+   "toparty" : "PartyID1|PartyID2", 
+   "totag" : "TagID1 | TagID2", 
+   "agentid" : "...", 
+   "file" : "..." 
 }
 ```
 3、5个请求参数+IP地址+创建时间+文件描述一起保存到数据库。文件保存在本地files/ip/
