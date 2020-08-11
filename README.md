@@ -4,16 +4,15 @@
 1、token设置为123abc，同步请求url为http://localhost:8000/upload/?token=123abc
 异步请求url为http://localhost:8000/asyupload/?token=123abc
 
-2、POST请求格式包含5个参数
-```JSON
-{
-   "touser" : "UserID1|UserID2|UserID3", 
-   "toparty" : "PartyID1|PartyID2", 
-   "totag" : "TagID1 | TagID2", 
-   "agentid" : "...", 
-   "file" : "..." 
-}
+2、POST请求content-type为multipart/form-data，包含5个参数
 ```
+"touser" : "UserID1|UserID2|UserID3"
+"toparty" : "PartyID1|PartyID2"
+"totag" : "TagID1 | TagID2"
+"agentid" : "AgentID"
+"file" : ...
+ ```
+
 3、5个请求参数+IP地址+创建时间+文件描述一起保存到数据库。文件保存在本地files/ip/
 
 4、同步返回参数。如果是微信接口问题，直接返回微信接口的返回参数；如果是开发接口这边的问题（比如token不正确，请求类型不正确等），返回这边相应的参数。
